@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+use CodeIgniter\Model;
+
+
+class FormModel extends Model
+{
+
+    protected $table      = 'form';
+
+    protected $primaryKey = 'code';
+
+    protected $returnType     = 'object';
+    protected $useSoftDeletes = true;
+    
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
+
+ protected $allowedFields = ['code','codeFunil','codeUsuario','codeEmpresa','titulo','descricao','campos','status','origem','acessoTipo','acessoValor','botao','created_at','updated_at','deleted_at'];
+
+ 
+}

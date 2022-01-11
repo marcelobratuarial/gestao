@@ -1,0 +1,152 @@
+.card{
+	margin-top: .5rem!important;
+    margin-bottom: .5rem!important;
+	border: 0;
+}
+/* Lists */
+.lists-container::-webkit-scrollbar {
+	height: 0.9rem;
+}
+
+.lists-container::-webkit-scrollbar-thumb {
+	background-color: #66a3c7;
+	border: 0.4rem solid #f7f7ff;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.lists-container {
+	display: flex;
+	align-items: start;
+	padding: 0 0.8rem 0.8rem;
+	overflow-x: auto;
+	height: calc(70vh - 1rem);
+}
+
+.list {
+	flex: 0 0 17rem;
+	display: flex;
+	flex-direction: column;
+	background-color: #e2e4e6;
+	max-height: calc(70vh - 4rem);
+	border-radius: 0.3rem;
+	margin-right: 1rem;
+}
+
+.list:last-of-type {
+	margin-right: 0;
+}
+
+.list-title {
+	color: #333;
+	margin: 1rem;
+	padding-bottom: 1rem;
+}
+
+.list-items {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: start;
+	padding: 0 0.6rem 0.5rem;
+	overflow-y: auto;
+}
+
+.list-items::-webkit-scrollbar {
+	width: 1.0rem;
+}
+
+.list-items::-webkit-scrollbar-thumb {
+	background-color: #666;
+	border-right: 0.6rem solid #e2e4e6;
+}
+
+.w-60 {
+	width: 60% !important;
+}
+
+
+.sortable li {
+	margin: 0 5px 10px 5px;
+	padding: 0;
+}
+
+.ui-state-highlight {
+	height: 2.5em;
+	line-height: 1.2em;
+	background-color: #0d6efd;
+	opacity: 0.5; border-style : dashed;
+	border-size: 0.5px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #fefefe
+}
+
+.ui-state-default {
+	margin: 0;
+}
+
+.ui-state-default .btn {
+	margin: 0;
+	cursor: grab;
+}
+
+.ui-state-default .btn:active {
+	cursor: grabbing !important;
+}
+
+.ui-state-disabled .btn {
+	cursor: no-drop !important;
+}
+
+.bg-cover {
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-cover .imgHidden {
+	visibility: hidden
+}
+
+#SORTABLE
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ol.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+
+
+.cursor-pointer{
+	cursor:pointer !important;
+}
+
+#sortableCampoExtra{
+	list-style: none;
+}
+#sortableCampoExtra i{
+	vertical-align: middle;
+}
+#sortableCampoExtra li:before {
+	content: "\eafb"; /* Font Unicode */
+	font-family: boxicons!important;
+	display: inline-block;
+	margin-left: -1.3em; /* same as padding-left set on li */
+	width: 1.8em; /* same as padding-left set on li */
+	font-size: 1.8em; /* same as padding-left set on li */
+	vertical-align: middle;
+  }

@@ -1,0 +1,74 @@
+[11-May-2021 19:21:18 America/Sao_Paulo] PHP Fatal error:  Uncaught ErrorException: Array to string conversion in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Usuario.php:58
+Stack trace:
+#0 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Usuario.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', '/home/nrdwmqajh...', 58, Array)
+#1 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(936): App\Controllers\Usuario->colunas()
+#2 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#3 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/nrdwmqajhccy/brasilplataformas.com.br/acesso/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+  thrown in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Usuario.php on line 58
+[19-May-2021 16:25:06 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare App\Controllers\Config::removeLogo() in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Config.php on line 155
+[24-May-2021 18:02:15 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getUsuario() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:172) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 360
+[15-Jun-2021 14:02:16 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getUsuario() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:178) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 89
+[15-Jun-2021 14:18:05 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getFilial() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:361) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 107
+[15-Jun-2021 14:18:09 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getFilial() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:361) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 107
+[16-Jun-2021 16:28:27 America/Sao_Paulo] PHP Fatal error:  Uncaught ErrorException: Object of class stdClass could not be converted to string in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php:142
+Stack trace:
+#0 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php(142): CodeIgniter\Debug\Exceptions->errorHandler(4096, 'Object of class...', '/home/nrdwmqajh...', 142, Array)
+#1 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Views/modules/lead/lista.php(74): getStatus('lead', 'T3214AT128E105', 'nome')
+#2 /home/nrdwmqajhccy/brasilplataformas.com.br/system/View/View.php(220): include('/home/nrdwmqajh...')
+#3 /home/nrdwmqajhccy/brasilplataformas.com.br/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 /home/nrdwmqajhccy/brasilplataformas.com.br/system/Common.php(1217): CodeIgniter\View\View->render('modules/lead/li...', Array, true)
+#5 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php(40): view('modules/lead/li...', Array)
+#6 /home/nrdwmqajhccy/brasilplataforma in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 142
+[17-Jun-2021 10:25:14 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getProduto() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php:62) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 150
+[17-Jun-2021 11:14:46 America/Sao_Paulo] PHP Fatal error:  Cannot use [] for reading in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Views/modules/lead/lista.php on line 75
+[23-Jun-2021 13:59:09 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getFormulario() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php:136) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 188
+[23-Jun-2021 13:59:11 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getFormulario() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php:136) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 188
+[23-Jun-2021 13:59:20 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getFormulario() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php:136) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/plataforma_helper.php on line 188
+[30-Jun-2021 08:39:21 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare App\Controllers\Pesquisa::index() in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Pesquisa.php on line 213
+[01-Jul-2021 14:27:00 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 419
+[01-Jul-2021 14:27:02 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 419
+[01-Jul-2021 14:27:12 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 419
+[01-Jul-2021 14:27:36 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 419
+[01-Jul-2021 14:27:43 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 419
+[01-Jul-2021 14:28:32 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:334) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 405
+[01-Jul-2021 14:28:33 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:334) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 405
+[01-Jul-2021 14:28:35 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:334) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 405
+[01-Jul-2021 14:30:39 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 420
+[01-Jul-2021 14:30:41 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare getCategoriaPesquisa() (previously declared in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php:347) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Helpers/default_helper.php on line 420
+[02-Jul-2021 14:27:09 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare App\Controllers\Motorhome\Protecaoveicular::editar() in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Motorhome/Protecaoveicular.php on line 40
+[02-Jul-2021 14:27:31 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare App\Controllers\Motorhome\Protecaoveicular::editar() in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Motorhome/Protecaoveicular.php on line 40
+[06-Jul-2021 11:51:08 America/Sao_Paulo] PHP Warning:  Uncaught ErrorException: Illegal string offset 'fc4b49bd76ab1a5c02ddfa60a9a8872a' in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php:27
+Stack trace:
+#0 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', '/home/nrdwmqajh...', 27, Array)
+#1 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(936): App\Controllers\Api\V1\Usuario->index()
+#2 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\V1\Usuario))
+#3 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/nrdwmqajhccy/brasilplataformas.com.br/bp-acesso/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+  thrown in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[06-Jul-2021 11:51:08 America/Sao_Paulo] PHP Fatal error:  Object of class stdClass could not be converted to string in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[06-Jul-2021 11:51:17 America/Sao_Paulo] PHP Warning:  Uncaught ErrorException: A non well formed numeric value encountered in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php:27
+Stack trace:
+#0 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', '/home/nrdwmqajh...', 27, Array)
+#1 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(936): App\Controllers\Api\V1\Usuario->index()
+#2 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\V1\Usuario))
+#3 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/nrdwmqajhccy/brasilplataformas.com.br/bp-acesso/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+  thrown in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[06-Jul-2021 11:51:17 America/Sao_Paulo] PHP Fatal error:  Object of class stdClass could not be converted to string in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[06-Jul-2021 11:51:36 America/Sao_Paulo] PHP Warning:  Uncaught ErrorException: A non well formed numeric value encountered in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php:27
+Stack trace:
+#0 /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', '/home/nrdwmqajh...', 27, Array)
+#1 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(936): App\Controllers\Api\V1\Usuario->index()
+#2 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\V1\Usuario))
+#3 /home/nrdwmqajhccy/brasilplataformas.com.br/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/nrdwmqajhccy/brasilplataformas.com.br/bp-acesso/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+  thrown in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[06-Jul-2021 11:51:36 America/Sao_Paulo] PHP Fatal error:  Object of class stdClass could not be converted to string in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Controllers/Api/V1/Usuario.php on line 27
+[07-Jul-2021 15:33:41 America/Sao_Paulo] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Views/modules/filial/detalhe.php on line 48
+[12-Jul-2021 13:46:02 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare Config\Database::$motorhome in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Config/Database.php on line 73
+[12-Jul-2021 13:46:28 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare Config\Database::$motorhome in /home/nrdwmqajhccy/brasilplataformas.com.br/app/Config/Database.php on line 73
