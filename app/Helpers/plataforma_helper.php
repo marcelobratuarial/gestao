@@ -20,14 +20,16 @@ function usuario(string $field = null, $accessToken = null)
 	endif;
 }
 
-function camposExtras($nomeTabela)
+function camposExtras($nomeTabela, $noEmpresa = null)
 {
 
 	// campos extras configurados pelo administrador
 	$config = new \App\Models\ConfigModel();
-	$config = $config->select('valor')
-		->where('codeEmpresa', CODEEMPRESA)
-		->where('categoria', 'COLUNASTABELAS')
+	$config = $config->select('valor');
+	if(is_null($noEmpresa)) :
+		$config->where('codeEmpresa', CODEEMPRESA);
+	endif;
+	$config = $config->where('categoria', 'COLUNASTABELAS')
 		->where('nome', $nomeTabela)
 		->first();
 	if (isset($config->valor)) :
@@ -198,11 +200,13 @@ function getDadosProposta($code = NULL, $field = NULL)
 	if ($code) :
 		$result = $model->where('code', $code)
 			->first();
-		if ($field) :
-			$result = json_decode($result->dadosProposta);
-			$return = (isset($result->$field)) ? $result->$field : 'não encontrado';
-		else :
-			$return = json_decode($result->dadosProposta);
+		if(($result)) :
+			if ($field) :
+				$result = json_decode($result->dadosProposta);
+				$return = (isset($result->$field)) ? $result->$field : 'não encontrado';
+			else :
+				$return = json_decode($result->dadosProposta);
+			endif;
 		endif;
 	elseif ($code == null && $field == null) :
 		$return = $model->findAll();
@@ -357,7 +361,7 @@ function getStatus($tabela, $code = null, $field = null)
 	$return = null;
 	$model = new \App\Models\StatusModel();
 	$model->where('tabela', $tabela)
-		->where('codeEmpresa', CODEEMPRESA)
+		// ->where('codeEmpresa', CODEEMPRESA)
 		->orderBy('tipo', 'ASC')
 		->orderBy('ordem', 'ASC');
 	if ($code) :

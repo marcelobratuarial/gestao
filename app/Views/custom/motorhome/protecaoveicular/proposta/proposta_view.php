@@ -232,7 +232,7 @@ helper('custom_motorhome');
                     <?php
                     $mensalidade = isset($d['tabela']['mensalidade']) ? $d['tabela']['mensalidade'] : 0;
                     $mensalidade = $mensalidade + ($mensalidade * $d['categoria']['agravo'] / 100);
-                    foreach (getOpcionaisCustom($d['codeCategoria']) as $k => $o) :
+                    /*foreach (getOpcionaisCustom($d['codeCategoria']) as $k => $o) :
                         if ($o['tipo'] != 'oculto' && isset($d['opcionais'][$o['slug']])) :
                             $o['valor'] = (is_array($d['opcionais'][$o['slug']])) ? $d['opcionais'][$o['slug']]['valor'] : $o['valor'];
                             $o['descricao_select'] = (is_array($d['opcionais'][$o['slug']])) ? ' - ' . $d['opcionais'][$o['slug']]['titulo'] : null;
@@ -253,7 +253,7 @@ helper('custom_motorhome');
                             // SOMA O VALOR NA PROPOSTA MAS NÃO EXIBE
                             $mensalidade = $mensalidade + ($o['valor']);
                         endif;
-                    endforeach;
+                    endforeach; */
                     ?>
                 </tbody>
                 <tfoot>

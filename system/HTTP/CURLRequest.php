@@ -794,7 +794,9 @@ class CURLRequest extends Request
 	protected function sendRequest(array $curlOptions = []): string
 	{
 		$ch = curl_init();
-
+		// echo "<pre>";
+		// print_r($curlOptions);
+		// echo "</pre>";
 		curl_setopt_array($ch, $curlOptions);
 
 		// Send the request and wait for a response.
@@ -802,7 +804,8 @@ class CURLRequest extends Request
 
 		if ($output === false)
 		{
-			throw HTTPException::forCurlError((string) curl_errno($ch), curl_error($ch));
+			print_r(curl_error($ch));
+			// throw HTTPException::forCurlError((string) curl_errno($ch), curl_error($ch));
 		}
 
 		curl_close($ch);

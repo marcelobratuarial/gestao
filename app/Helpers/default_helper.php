@@ -350,13 +350,22 @@ function exibe($lead, $myField, $array = false)
 
 function getApi($request, $public = false)
 {
+	// if($request == 'tabela-motorhome/implementos') {
+
+	// 	$a = json_decode(file_get_contents(FCPATH .'content/tabela-referencia.json'));
+	// 	return $a;
+	// }
+	// exit;
+        
 	if ($public) :
+		// echo base_url('api/publico');exit;
 		$api = \Config\Services::curlrequest([
 			'baseURI' => base_url('api/publico') . '/',
 			"headers" => [
 				"Accept" => "application/json"
 			]
 		]);
+		// var_dump($api->get($request));exit;
 		return json_decode($api->get($request)->getBody());
 	else :
 		$api = \Config\Services::curlrequest();

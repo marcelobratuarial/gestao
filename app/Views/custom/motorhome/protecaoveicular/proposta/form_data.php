@@ -1,5 +1,6 @@
 <?php
 $implementoNomes = getApi('tabela-motorhome/implementos', false);
+// echo "<pre>";print_r($implementoNomes);exit;
 ?>
 <div class="card border-top border-0 border-4 border-primary">
     <div class="card-body p-5">

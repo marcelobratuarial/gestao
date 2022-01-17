@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Motorhome;
 
+use App\Models\ProdutoModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
-use App\Models\ProdutoModel;
 
 
 class BaseController extends Controller
@@ -31,18 +31,16 @@ class BaseController extends Controller
 
 		$this->session = \Config\Services::session();
 
-
-		// $this->api = \Config\Services::curlrequest([
-		// 	'baseURI' => base_url('api/v1') . '/',
-		// 	"headers" => [
-		// 		"Accept" => "application/json"
-		// 	]
-		// ]);
-
-
 		// checa se esta logado
-		checkAuth();
+		$this->path = 'motorhome/protecaoveicular';
+		$produtoModel = new ProdutoModel();
+		$this->produto = $produtoModel->where('codeEmpresa', CODEEMPRESA)->where('path', $this->path)->first();
 
-		
+		if (!$this->produto) :
+			setSwal('error', 'Produto não encontrado!', 'O produto que você tentou acessar não existe.');
+			echo '<script>location.href="' . base_url('dashboard') . '"</script>';
+		endif;
+
+		checkAuth();
 	}
 }

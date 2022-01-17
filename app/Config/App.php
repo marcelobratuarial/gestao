@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = "http://localhost/gestao";
+	public $baseURL = "http://localhost/gestao-bp-git";
 
 	public function __construct()
 	{

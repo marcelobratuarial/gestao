@@ -12,34 +12,41 @@ class Tabela_Motorhome extends ResourceController
 
     function __construct()
     {
+//         ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
         $this->api = \Config\Services::curlrequest([
-            "baseURI" => 'https://fipe.brasilplataformas.com.br/api/',
+            "baseURI" => 'http://fipe.brasilplataformas.com.br/api/',
             "headers" => [
-                "chave" => "$2y$10$8IAZn7HKq7QJWbh37N3GOOeRVv.sM9tcTLBRYwRuf2g98olRyqieW"
+                "chave" => '$3y$10$8IAZn7HKq7QJWbh37N3GOOeRVv' //old $2y$10$8IAZn7HKq7QJWbh37N3GOOeRVv.sM9tcTLBRYwRuf2g98olRyqieW"
             ]
         ]);
+        // $result = json_decode($this->api->post('ConsultarTabelaDeReferencia')->getBody(), true);
+        $a = json_decode(file_get_contents(FCPATH .'content/tabela-referencia.json'), true);
 
-        $result = json_decode($this->api->post('ConsultarTabelaDeReferencia')->getBody(), true);
-        $this->codigoTabelaReferencia = $result[0]['Codigo'];
+        // print_r($a);
+        $this->codigoTabelaReferencia = $a[0]['Codigo'];
 
         $this->tipos = ['Basculante', 'Baú', 'Bi-caçamba', 'Boiadeiro', 'Camara Frigorifica', 'Camper', 'Carga Seca', 'Carroceria', 'Caçamba', 'Dolly', 'Graneleira', 'Munck', 'Prancha', 'Tanque', 'Terceiro eixo', 'Quarto eixo', 'Tora'];
 
         $uri = new \CodeIgniter\HTTP\URI(current_url());
         $categoriaURL = $uri->getSegment(4);
-        if (!empty($categoriaURL) && $categoriaURL != 'implementos' && $categoriaURL != 'carretas') :
-            $model = new \App\Models\Motorhome\ProtecaoVeicular\CategoriaModel();
-            $this->categoria = $model->select('*')->where('code', $categoriaURL)->first();
-            if ($this->categoria->implemento) :
-                $this->categoria->implemento = true;
-            else :
-                $this->categoria->implemento = false;
-            endif;
-            if ($this->categoria->carreta) :
-                $this->categoria->carreta = true;
-            else :
-                $this->categoria->carreta = false;
-            endif;
-        endif;
+        // echo "heeee";
+        // var_dump($categoriaURL);
+        // if (!empty($categoriaURL) && $categoriaURL != 'implementos' && $categoriaURL != 'carretas') :
+        //     $model = new \App\Models\Motorhome\ProtecaoVeicular\CategoriaModel();
+        //     $this->categoria = $model->select('*')->where('code', $categoriaURL)->first();
+        //     if ($this->categoria->implemento) :
+        //         $this->categoria->implemento = true;
+        //     else :
+        //         $this->categoria->implemento = false;
+        //     endif;
+        //     if ($this->categoria->carreta) :
+        //         $this->categoria->carreta = true;
+        //     else :
+        //         $this->categoria->carreta = false;
+        //     endif;
+        // endif;
     }
 
     public function categorias()
@@ -51,6 +58,7 @@ class Tabela_Motorhome extends ResourceController
 
     public function implementos()
     {
+        // print_r($this->tipos);exit;
         return $this->respond($this->tipos);
     }
 

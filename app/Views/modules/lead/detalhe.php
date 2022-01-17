@@ -44,7 +44,7 @@ $status = getStatus('lead', $lead->codeStatus);
 		  
 		   <div class="col-md-6">
             <label class="form-label">Empresa</label>
-            <input class="form-control" disabled value='<?= $lead->empresa; ?>'>
+            <input class="form-control" disabled value='<?= isset($lead->empresa) ? $lead->empresa : 'Not found'; ?>'>
           </div>
 		  
           <div class="col-md-4">

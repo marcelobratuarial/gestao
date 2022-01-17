@@ -76,7 +76,8 @@ class Lead extends BaseController
 			setSwal('error', 'Ops!', 'Lead não encontrado');
 			return redirect()->to(base_url('lead'));
 		endif;
-
+// dd($result);
+// 		exit;
 		$statusHistoricoModel = new StatusHistoricoModel();
 		$historico = $statusHistoricoModel->where('tabela', 'lead')
 			->like('codeRef', $codeLead)
